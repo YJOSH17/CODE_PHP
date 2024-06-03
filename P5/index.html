@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LOGIN</title>
+   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/estilo.css">
+
+
+</head>
+
+<body>
+   <!-- partial:index.partial.html -->
+
+   <!-- LOGN IN FORM by Omar Dsoky -->
+   <div id="form"> <!--   con = Container  for items in the form-->
+      <div class="con">
+         <!--     Start  header Content  -->
+         <header class="head-form">
+            <h2>INICIAR</h2><br>
+            <!--     A welcome message or an explanation of the login form -->
+            <p>INICIA SECIÓN COLOCANDO TU USUARIO Y CONTRASEÑA</p>
+         </header>
+         <!--     End  header Content  -->
+         <br>
+         <div class="field-set">
+
+            <!--   user name -->
+            <span class="input-item">
+               <i class="fa fa-user-circle"></i>
+            </span>
+            <!--   user name Input-->
+            <input class="form-input" id="txt-input" type="text" placeholder="@Correo">
+
+            <br><br>
+
+            <!--   Password -->
+
+            <span class="input-item">
+               <i class="fa fa-key"></i>
+            </span>
+            <!--   Password Input-->
+            <input class="form-input" type="password" placeholder="Contraseña" id="pwd" name="password">
+
+            <!--      Show/hide password  -->
+            <span>
+               <i class="fa fa-eye" aria-hidden="true" type="button" id="eye"></i>
+            </span>
+
+
+
+            <!--        buttons -->    
+            <!--      button LogIn -->
+            <button id="btnI" onclick="login()"> INICIAR SESIÓN </button>
+            <a href="registrar.html" class="link-with-icon">REGISTRARSE <i class="fa fa-user-plus"
+                  aria-hidden="true"></i></a>
+
+         </div>
+
+         <!--   other buttons -->
+
+
+         <!--   End Conrainer  -->
+      </div>
+
+      <!-- End Form -->
+   </div>
+
+   <!-- partial -->
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/bootstrap.bundle.js"></script>
+   <script src="assets/js/sweetalert2.all.min.js"></script>
+</body>
+
+</html>

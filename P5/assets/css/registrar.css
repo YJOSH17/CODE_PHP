@@ -1,0 +1,220 @@
+header h1{
+    text-align: center;/*CENTRAR EL TEXTO */
+    font-size: 25px;/*TAMAÑO DE LETRA*/
+    font-weight: bold;/*NEGRITAS*/
+}
+
+.contenedor-formulario{
+    position: relative;
+    margin: 30px auto;/*CENTRA EL FORMULARIO DE FORMA HORIZONTAL Y DA UN MARGEN SUPERIOR E INFERORO DE 30 PX*/
+    width: 450px;/*DA UN ANCHO FIJO DE 400PX AL CONTENEDOR DEL FORMULARIO*/
+}
+
+#form{ 
+    text-align:center;/*ALINEANDO TODOS LOS ELEMENTOS AL CENTRO DEL FORMULARIO*/
+}
+
+.campo-texto{
+    width: 300px;/*TAMAÑO DEL INPUT */
+    height: 25px;/*ALTURA DEL INPUT*/
+    padding: 10px;/*ESPACIO QUE DEJA ENTRE EL BORDE DEL INPUT Y LA LETRA ESCRITA DENTRO DEL INPUT*/
+    padding-left: 50px;/*ESPACIO QUE SE DA AL LADO IZQUIERDO*/
+    margin-top: 20px;/*MARGEN SUPERIOR CON RESPECTO DEL ELEMENTO QUE SE ENCUENTRE POR ENCIMA*/
+    font-weight: bolder;/*NEGRITAS*/
+    text-align:left;/*ALINEACION DEL TEXTO*/
+}
+
+textarea.campo-texto{/*ESTE CSS ACTUARA SOLO SOBRE LOS ELEMENTOS TEXTAREA QUE CONTENGAN LA CLASE CAMPO TEXTO, ESTO QUIERE DECIR QUE NO AFECTARA A LOS INPUT NI A NINGUN OTRO ELEMENTO MAS QUE A LOS TEXTAREA*/
+    resize:vertical;/**/
+}
+
+.submite{
+    width: 180px;
+    margin-top: 20px;
+    display:inline-block;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.borrar{
+    width: 180px;
+    margin-top: 20px;
+    display:inline-block;
+    height: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 22px;
+    display:inline-block;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    height: 50px;
+    text-align:center;
+    line-height:1.8;
+}
+
+footer span{
+    display:inline-block;
+    text-align:left;
+    height:40px;
+    width:210px;
+    line-height:40px;
+    margin-top: 5px;
+}
+.boton{
+    width: 150px;
+    height: 40px;
+    display:inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+*{ 
+    font-family: helvetica;
+}
+
+body{
+    background:  url(F1.jpg);
+    
+    background-size: cover;
+    
+}
+
+.contenedor-formulario{
+    border-radius: 2px;
+    background:rgba(20,20,20,0.7);
+    box-shadow: 0 9px 50px hsla(20, 67%, 85%, 0.5);
+    
+    min-height: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 85%, 0.5);
+    padding: 5%;
+}
+
+header{
+    height: 50px;
+    background: rgba(10,10,10,0.5);
+}
+
+header h1{
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.campo-texto{
+    border-radius: 5px;
+    border: none;
+    background:rgba(10,10,10,0.5);
+    font-weight: bolder;
+    color: white;
+    box-shadow: 0 0 1px;
+}
+
+.campo-texto:focus{
+    outline: none;
+    box-shadow: 0 0 5px white;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+
+.submite,.borrar{
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0px 6px 0px dodgerblue;
+    transition: all 0.1s;
+}
+
+
+
+.submite:active{
+    box-shadow: 0px 2px 0px blueviolet;
+  position: relative;
+  top: 2px;
+}
+
+.borrar:active{
+    box-shadow: 0px 2px 0px blueviolet;
+  position: relative;
+  top: 2px;
+}
+
+a{
+    color: white;
+    margin-bottom:15px;
+}
+
+footer{
+    height: 50px;
+    background: rgba(10,10,10,0.5);
+    color: #fff;
+}
+footer span{
+
+}
+.boton{
+    margin-top:5px;
+    margin-bottom:0px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #0c9;
+    color: white;
+    text-shadow:1px 1px 1px black;
+    line-height:40px;
+}
+
+.boton:hover{
+    text-decoration:none;
+    background-color: #0c5;
+}
+.boton:focus{
+    outline:none
+}
+
+
+#nombre{
+    background-repeat:no-repeat;
+    background-position:10px 50%;
+    background-size:25px 25px;
+    
+}
+
+#apellido{
+    background-repeat:no-repeat;
+    background-position:10px 50%;
+    background-size:25px 25px;
+}
+#usuario{
+    background-repeat:no-repeat;
+    background-position:10px 50%;
+    background-size:25px 25px;
+}
+#men{
+   text-align: center;
+   
+}
+
+       

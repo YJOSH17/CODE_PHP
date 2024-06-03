@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PRODUCTOS</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-center" onload="cargarProductos()">
+
+    <nav class="navbar bg-danger" data-bs-theme="dark">  
+        <div class="container-fluid text-center">
+    <img src="assets/img/jsL.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top m-auto"><br><br>
+    <h1 class="navbar-brand m-auto">CRUD CONTACTOS</h1>
+    <span class="d-inline-block align-text-top m-auto">
+    <h1 class="navbar-brand m-auto">MARION SOFIA M.B</h1> 
+            
+            <h1 class="navbar-brand m-auto">JOSHUA YERAY B.G</h1> 
+        </span>              
+    </div>
+    </nav>
+    
+      <br><br>
+
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="card text-center">
+                <div class="card-header">
+                    <img src="assets/img/LS.png" alt="Logo" width="80"  class="d-inline-block align-text-top m-auto"><br><br>
+                    <h1 class="text-center w-100 m-auto">CRUD PRODUCTOS</h1>
+                </div>
+                
+                <div class="card-body">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addProducto"><i class="bi bi-shop me-2"></i>AGREGAR</button>
+
+                      <table class="table w-75 m-auto mt-4 table-striped-columns table-dark table-bordered border-primary">
+                        <tr>
+                            <td>ID</td>
+                            <td>NOMBRE PRODUCTO</td>
+                            <td>PRECIO</td>
+                            <td>CANTIDAD</td>
+                            <td>PROVEEDOR</td>
+                            <td>UNIDAD MEDIDA</td>
+                            <td>CATEGORÍA</td>
+                            <td colspan="2">ACTION</td>
+                        </tr>
+
+                        <tbody id="listaProductos">
+
+                        </tbody>
+
+                      </table>
+    
+                </div>
+                <div class="card-footer text-body-dark">
+                    <h2>JOSHUA Y SOFI</h2>
+                </div>
+            </div>
+    </div>
+
+   
+
+    <div class="modal fade" id="addProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">AGREGAR PRODUCTOS</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label  class="form-label">NOMBRE PRODUCTO:</label>
+                        <input type="text" class="form-control text-center" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">PRECIO:</label>
+                        <input type="number" class="form-control text-center" id="precio">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">CANTIDA:</label>
+                        <input type="number" class="form-control text-center" id="cantidad">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">PROVEEDOR:</label>
+                        <input type="text" class="form-control text-center" id="proveedor">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">UNIDAD DE MEDIDA(KG,G,L,ML):</label>
+                        <input type="text" class="form-control text-center" id="unidadm">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">CATEGORIA:</label>
+                        <input type="text" class="form-control text-center" id="categoria">
+                    </div>
+                </form>                
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-success" id="btnGuardar" data-bs-dismiss="modal"><i class="bi bi-check2-circle me-2"></i>GUARDAR</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle me-2"></i>CANCELAR</button>              
+            </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="modal fade" id="editProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">ACTUALIZAR PRODUCTO</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label  class="form-label">NOMBRE PRODUCTO:</label>
+                        <input type="text" class="form-control text-center" id="enombre">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">PRECIO:</label>
+                        <input type="number" class="form-control text-center" id="eprecio">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">CANTIDAD:</label>
+                        <input type="number" class="form-control text-center" id="ecantidad">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">PROVEEDOR:</label>
+                        <input type="text" class="form-control text-center" id="eproveedor">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">UNIDAD DE MEDIDA(KG,G,L,ML):</label>
+                        <input type="text" class="form-control text-center" id="eunidadm">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">CATEGORIA:</label>
+                        <input type="text" class="form-control text-center" id="ecategoria">
+                    </div>
+                </form>                
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="id">
+                
+                <button type="button" class="btn btn-success" onclick="actualizarProducto()" data-bs-dismiss="modal"><i class="bi bi-download me-2"></i>ACTUALIZAR</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle me-2"></i>CANCELAR</button>              
+            </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/sweetalert2.all.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

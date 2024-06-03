@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 2s all ease;
+ }
+ 
+ body {
+    text-align: center;
+    height: 100pc;
+    background: url(assets/img/F1.jpg);
+    color: white;
+ 
+ }
+ .card-body{
+    background:black
+ }
+ .modal-content{
+    background: rgb(19, 19, 19);
+ }
+ input[type="text"]{
+    background: transparent;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+border: 2px dotted deepskyblue;
+box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.modal-header,.modal-footer,.card-header,.card-footer{
+    background: rgb(0, 83, 179);
+    color: aliceblue;
+}
